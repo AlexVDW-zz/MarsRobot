@@ -40,7 +40,7 @@ public enum CardinalDirection{
               return S;
             }
       }
-      return N; // throw Exception
+      throw new IllegalArgumentException("Unknown direction abbreviation: " + abbreviation);
     }
     
     //static helper methods to get the cardinal direction by abbreviation or degrees
@@ -59,7 +59,7 @@ public enum CardinalDirection{
               return S;
             }
       }
-      return N; // throw Exception
+      throw new IllegalArgumentException("Unknown direction degrees: " + degrees);
     }
     
     //Constructor to set the abbreviation and degrees for each cardinal direction
