@@ -136,19 +136,16 @@ public class Robot{
             //If the robot gets lost at a specific position, it will stop processing instructions and return its final position and direction as a string
             switch (c) {
                 case 'L' -> rotateLeft();
-                //System.out.println(c + " | " + this.toString());
                 case 'R' -> rotateRight();
-                //System.out.println(c + " | " + this.toString());
                 case 'F' -> {
                     moveForward();
-                    //System.out.println(c + " | " + this.toString());
                     if (lost) {
                         //exit the loop if the robot is lost
                         break OUTER;
                     }
                 }
                 default -> {
-                    //throw error
+                    throw new IllegalArgumentException("Unknown instruction: " + c);
                 }
             }
         }
