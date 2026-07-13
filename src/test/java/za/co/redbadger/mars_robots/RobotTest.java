@@ -75,17 +75,17 @@ class RobotTest {
     }
 
     @Test
-    void turnRightWhileFacingEastResultsInNorth() {
+    void turnRightWhileFacingEastResultsInSouth() {
         Robot robot = new Robot(2, 2, 'E', new GroundControl(5, 3));
         robot.process("R");
-        assertEquals("2 2 N", robot.toString());
+        assertEquals("2 2 S", robot.toString());
     }
 
     @Test
-    void turnRightWhileFacingWestResultsInSouth() {
+    void turnRightWhileFacingWestResultsInNorth() {
         Robot robot = new Robot(2, 2, 'W', new GroundControl(5, 3));
         robot.process("R");
-        assertEquals("2 2 S", robot.toString());
+        assertEquals("2 2 N", robot.toString());
     }
 
     @Test
