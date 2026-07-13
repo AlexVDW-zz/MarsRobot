@@ -10,11 +10,11 @@ The file specifies :
 The file location is specified using the application properties:
 input.file.path=test.txt
 
-##Techinal Specifications
+## Techinal Specifications
 - Java 26
 - Spring Boot
 
-##Test Results
+## Test Results
 
 Input:
 
